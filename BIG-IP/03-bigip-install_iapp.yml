@@ -60,6 +60,7 @@
 
 - name: Perform the installation
   hosts: bigips
+  gather_facts: no
   tasks:
     ## This is where we fetch the iApp from a HTTP link and push it to the BIG-IP
     - name: Push iApp to BIG-IP
@@ -76,6 +77,7 @@
 - name: Verify {{appsvcs_file}} Installation
   hosts: bigips
   connection: local
+  gather_facts: no
   tasks:
     - name: Get the templates
       uri:
