@@ -10,5 +10,6 @@
     server: "{{bigip_address}}"
     user: "{{username}}"
     password: "{{password}}"
+    validate_certs: false
   delegate_to: localhost
-  validate_certs: false
+
