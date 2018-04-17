@@ -11,3 +11,4 @@
     user: "{{username}}"
     password: "{{password}}"
   delegate_to: localhost
+  validate_certs: false
