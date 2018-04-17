@@ -73,10 +73,8 @@
         password: default
     ## Execute the tmsh command to install the iApp from /var/tmp
     ## This is necessary because you cannot upload an iApp via the REST API.
-    - name: "Install iApp"
-      shell: "tmsh load /sys application template /var/tmp/{{ appsvcs_file }}"
-      user: root
-      password: default
+#    - name: "Install iApp"
+#      shell: "tmsh load /sys application template /var/tmp/{{ appsvcs_file }}"
 # Check that it worked by retrieving the iApp list via the REST API
 - name: Verify {{appsvcs_file}} Installation
   hosts: bigips
