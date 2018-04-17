@@ -1,0 +1,6 @@
+---
+- name: Deploy iApp
+  hosts: localhost
+  gather_facts: false
+  roles:
+  - { role: deploy_iapp }

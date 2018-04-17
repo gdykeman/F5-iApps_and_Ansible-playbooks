@@ -61,6 +61,8 @@
 - name: Perform the installation
   hosts: bigips
   gather_facts: no
+  remote_user: root
+
   tasks:
     ## This is where we fetch the iApp from a HTTP link and push it to the BIG-IP
     - name: Push iApp to BIG-IP

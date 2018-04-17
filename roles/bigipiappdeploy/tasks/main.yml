@@ -1,0 +1,13 @@
+---
+- name: Build JSON payload
+  template: src=f5.http.j2 dest=/{{directory_path}}/f5.http.json
+
+- name: Deploy F5 http iApp
+  bigip_iapp_service:
+    name: "http_service_iapp"
+    template: "f5.http"
+    parameters: "{{ lookup('template', 'f5.http.json') }}"
+    server: "{{bigip_address}}"
+    user: "{{username}}"
+    password: "{{password}}"
+  delegate_to: localhost

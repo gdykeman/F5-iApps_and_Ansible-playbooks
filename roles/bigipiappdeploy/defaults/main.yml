@@ -1,0 +1,6 @@
+directory_path: "/root/playbooks/roles/deploy_iapp/templates"
+bigip_address: "XX.XXX.XX.XXX"
+username: "admin"
+password: "admin"
+
+vip_ip: "10.168.68.144"
